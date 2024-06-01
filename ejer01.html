@@ -11,16 +11,25 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
             background-color: #f0f0f0;
             margin: 0;
         }
-
         video {
             border: 2px solid #ccc;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+		
+		.container {
+			text-align: center;
+			width: 640px; 
+		}
+
+		.centered-text {
+			text-align: justify;
+			width: 100%; 
+			margin-top: 20px; 
+		}
     </style>
 </head>
 <body>
@@ -33,13 +42,15 @@
 	</video>
 	
 	<h2>Tarea 1.2</h2>
-	<video width="640" height="360" controls autoplay loop muted preload="auto" poster="ejer1.jpg">
-		<source src="IMG_9505_a.mp4" type="video/mp4">
-		<source src="IMG_9505_b.webm" type="video/webm">
-		<track src="subs_es.vtt" kind="subtitles" srclang="es" label="Español">
-		<track src="subs_ca.vtt" kind="subtitles" srclang="ca" label="Català" default>
-		Este navegador no soporta la reproducción de videos.
-	</video>
-    <p>Controles añadidos: el video se reproduce automáticamente al acceder (autoplay), se repite en bucle (loop), está silenciado (mute) y se carga automáticamente (preload). Contiene una imagen de portada (poster) subtitulos (tracks) en español y català</p>
+	<div class="container">
+		<video width="640" height="360" controls autoplay loop muted preload="auto" poster="ejer1.jpg">
+			<source src="IMG_9505_a.mp4" type="video/mp4">
+			<source src="IMG_9505_b.webm" type="video/webm">
+			<track src="subs_es.vtt" kind="subtitles" srclang="es" label="Español">
+			<track src="subs_ca.vtt" kind="subtitles" srclang="ca" label="Català" default>
+			Este navegador no soporta la reproducción de videos.
+		</video>
+		<p class="centered-text">Controles añadidos: el video se reproduce automáticamente al acceder (autoplay), se repite en bucle (loop), está silenciado (mute) y se carga automáticamente (preload). Contiene una imagen de portada (poster) subtitulos (tracks) en español y català</p>
+	</div>
 </body>
 </html>
