@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproducción de Video en HTML5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        video {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+	<h2>Tarea 1.1</h2>
+	<video width="640" height="360" controls poster="ejer1.jpg">
+        <source src="IMG_9505_a.mp4" type="video/mp4">
+        <source src="IMG_9505_b.webm" type="video/webm">
+		Este navegador no soporta la reproducción de videos.
+	</video>
+	
+	<h2>Tarea 1.2</h2>
+	<video width="640" height="360" controls autoplay loop muted preload="auto" poster="ejer1.jpg">
+		<source src="IMG_9505_a.mp4" type="video/mp4">
+		<source src="IMG_9505_b.webm" type="video/webm">
+		<track src="subs_es.vtt" kind="subtitles" srclang="es" label="Español">
+		<track src="subs_ca.vtt" kind="subtitles" srclang="ca" label="Català" default>
+		Este navegador no soporta la reproducción de videos.
+	</video>
+    <p>Este video se reproduce automáticamente, se repite en bucle, está silenciado y se carga automáticamente. Además, tiene una imagen de póster.</p>
+</body>
+</html>
